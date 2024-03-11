@@ -9,7 +9,7 @@
 
 This repository contains the code for the paper "Snapshot Reinforcement Learning: Leveraging Prior Trajectories for Efficiency" by [Yanxiao Zhao](https://sdpkjc.com), Yangge Qian, Tianyi Wang, Jingyang Shan, Xiaolin Qin.
 
-![snapshotrl](./website/snapshotrl.svg)
+![snapshotrl](./snapshotrl.svg)
 
 ## Running the code
 
