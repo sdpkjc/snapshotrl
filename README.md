@@ -4,7 +4,7 @@
 <a target="_blank" href="https://arxiv.org/abs/2403.00673"><img src="https://img.shields.io/badge/arXiv-2403.00673-B31B1B?logo=arxiv" alt="arxiv"/></a>
 <a target="_blank" href="https://github.com/sdpkjc/snapshotrl"><img src="https://img.shields.io/badge/GitHub-sdpkjc/snapshotrl-181717?logo=github" alt="github"/></a>
 <a target="_blank" href="https://huggingface.co/sdpkjc"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Models-@sdpkjc-F8D521" alt="models"></a>
-<a target="_blank" href="https://wandb.ai/iiiiiiiooo/snapshotrl"><img src="https://img.shields.io/badge/Weights%20&amp;%20Biases-Report-FFBE00?logo=weightsandbiases" alt="weights and biases"/></a>
+<a target="_blank" href="https://wandb.ai/iiiiiiiooo/snapshotrl/reportlist"><img src="https://img.shields.io/badge/Weights%20&amp;%20Biases-Report-FFBE00?logo=weightsandbiases" alt="weights and biases"/></a>
 </p>
 
 This repository contains the code for the paper "Snapshot Reinforcement Learning: Leveraging Prior Trajectories for Efficiency" by [Yanxiao Zhao](https://sdpkjc.com), Yangge Qian, Tianyi Wang, Jingyang Shan, Xiaolin Qin.
