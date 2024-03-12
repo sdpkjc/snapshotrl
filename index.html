@@ -4,32 +4,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🚀 SnapshotRL</title>
-  <!-- 引入Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="text-gray-900">
   <div class="flex justify-center min-h-screen">
     <div class="w-full lg:w-[1024px] mx-auto p-4">
         
     <h1 class="text-center text-xl mt-8 font-bold font-mono text-pretty">🚀 Snapshot Reinforcement Learning: <span class="italic">Leveraging Prior Trajectories for Efficiency</span></h1>
     
-    <p class="text-center mt-3 mb-5 font-serif italic text-sm"><a target="_blank" href="https://sdpkjc.com" class="text-blue-500 hover:underline">Yanxiao Zhao</a>, Yange Qian, Tianyi Wang, Jingyang Shan, Xiaolin Qin</p>
-    
-    <div class="flex justify-center items-center mb-5">
+    <p class="text-center mt-5 mb-3 font-serif italic text-sm"><a target="_blank" href="https://sdpkjc.com" class="text-blue-500 hover:underline">Yanxiao Zhao</a>, Yange Qian, Tianyi Wang, Jingyang Shan, Xiaolin Qin</p>
+
+    <div class="flex justify-center items-center mb-3">
       <a class="mx-1 hover:scale-125 duration-100 delay-100 hover:delay-100" target="_blank" href="https://arxiv.org/abs/2403.00673"><img class="" src="https://img.shields.io/badge/arXiv-2403.00673-B31B1B?logo=arxiv" alt="arxiv"/></a>
       <a class="mx-1 hover:scale-125 duration-100 delay-100 hover:delay-100" target="_blank" href="https://github.com/sdpkjc/snapshotrl"><img class="" src="https://img.shields.io/badge/GitHub-sdpkjc/snapshotrl-181717?logo=github" alt="github"/></a>
       <a class="mx-1 hover:scale-125 duration-100 delay-100 hover:delay-100" target="_blank" href="https://huggingface.co/sdpkjc"><img class="" src="https://img.shields.io/badge/%F0%9F%A4%97%20Models-@sdpkjc-F8D521" alt="models"></a>
-      <a class="mx-1 hover:scale-125 duration-100 delay-100 hover:delay-100" target="_blank" href="https://wandb.ai/iiiiiiiooo/snapshotrl"><img class="" src="https://img.shields.io/badge/Weights%20&amp;%20Biases-Report-FFBE00?logo=weightsandbiases" alt="weights and biases"/></a></p>
+      <a class="mx-1 hover:scale-125 duration-100 delay-100 hover:delay-100" target="_blank" href="https://wandb.ai/iiiiiiiooo/snapshotrl/reportlist"><img class="" src="https://img.shields.io/badge/Weights%20&amp;%20Biases-Report-FFBE00?logo=weightsandbiases" alt="weights and biases"/></a></p>
     </div>
 
     <div class="flex justify-center">
-      <img class="mx-auto m-5 hover:scale-125 duration-200 delay-100 hover:delay-100 hover:backdrop-blur-sm hover:border-2" src="snapshotrl.svg" alt="Schematic Illustration of Snapshot Reinforcement Learning" style="max-width:85%;">
+      <img class="mx-auto m-3 border-2" src="snapshotrl.svg" alt="Schematic Illustration of Snapshot Reinforcement Learning" style="max-width:90%;">
     </div>
-    
-    <h2 class="text-align text-lg mt-2 mb-2 font-bold font-mono">🔖 Citing this Work</h2>
 
-<div class="relative w-11/12 mx-auto mt-4">
-    <div class="bg-gray-200 p-4 rounded-md">
+<h2 class="text-align text-lg mt-2 mb-2 font-bold font-mono">📊 Experiment Results</h2>
+
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+  <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" data-tabs-toggle="#default-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+      <li class="me-2">
+          <button class="inline-block p-4 border-b-2 rounded-t-lg" id="td3-curve-tab" data-tabs-target="#td3-curve" type="button" role="tab" aria-selected="false">TD3</button>
+      </li>
+      <li class="me-2">
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="sac-curve-tab" data-tabs-target="#sac-curve" type="button" role="tab" aria-controls="sac" aria-selected="false">SAC</button>
+      </li>
+      <li class="me-2">
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="ppo-curve-tab" data-tabs-target="#ppo-curve" type="button" role="tab" aria-controls="ppo" aria-selected="false">PPO</button>
+      </li>
+      <li class="me-2">
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="td3-ablation-curve-tab" data-tabs-target="#td3-ablation-curve" type="button" role="tab" aria-controls="td3-ablation" aria-selected="false">TD3 Ablation</button>
+      </li>
+      <li>
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" onclick="window.open('https://wandb.ai/iiiiiiiooo/snapshotrl/reportlist', '_blank');">🔗 See More</button>
+      </li>
+  </ul>
+</div>
+<div id="default-styled-tab-content">
+  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="td3-curve" aria-labelledby="td3-tab">
+    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of TD3, SnapshotRL+TD3, and S3RL+TD3 on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2" src="td3.svg" alt="SnapshotRL+TD3 Curve" style="max-width:90%;">
+  </div>
+  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="sac-curve" aria-labelledby="sac-tab">
+    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of SAC, SnapshotRL+SAC, and S3RL+SAC on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2" src="sac.svg" alt="SnapshotRL+SAC Curve" style="max-width:90%;">
+  </div>
+  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="ppo-curve" aria-labelledby="ppo-tab">
+    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of PPO, SnapshotRL+PPO, and S3RL+PPO on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2" src="ppo.svg" alt="SnapshotRL+PPO Curve" style="max-width:90%;">
+  </div>
+  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="td3-ablation-curve" aria-labelledby="td3-ablation-tab">
+    <p class="text-sm text-gray-500 dark:text-gray-400">Ablation study results showing the impact of key components on the sample efficiency of S3RL+TD3 on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2" src="td3_ablation.svg" alt="S3RL+TD3 Ablation Curve" style="max-width:90%;">
+  </div>
+</div>
+
+<!--
+<h2 class="text-align text-lg mt-2 mb-2 font-bold font-mono">🤗 Model List</h2>
+
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+  <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" data-tabs-toggle="#default-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+      <li class="me-2">
+          <button class="inline-block p-4 border-b-2 rounded-t-lg" id="td3-model-tab" data-tabs-target="#td3-model" type="button" role="tab" aria-selected="false">TD3 Teacher Models</button>
+      </li>
+      <li class="me-2">
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="sac-model-tab" data-tabs-target="#sac-model" type="button" role="tab" aria-controls="sac" aria-selected="false">SAC Teacher Models</button>
+      </li>
+      <li>
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="ppo-model-tab" data-tabs-target="#ppo-model" type="button" role="tab" aria-controls="ppo" aria-selected="false">PPO Teacher Models</button>
+      </li>
+  </ul>
+</div>
+<div id="default-styled-tab-content">
+  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="td3-model" aria-labelledby="td3-model-tab">
+    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of TD3, SnapshotRL+TD3, and S3RL+TD3 on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2" src="td3.svg" alt="TD3 Model List" style="max-width:90%;">
+  </div>
+  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="sac-model" aria-labelledby="sac-model-tab">
+    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of SAC, SnapshotRL+SAC, and S3RL+SAC on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2" src="sac.svg" alt="SAC Model List" style="max-width:90%;">
+  </div>
+  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="ppo-model" aria-labelledby="ppo-model-tab">
+    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of PPO, SnapshotRL+PPO, and S3RL+PPO on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2" src="ppo.svg" alt="PPO Model List" style="max-width:90%;">
+  </div>
+</div>
+
+-->
+
+
+    
+<h2 class="text-align text-lg mt-2 mb-2 font-bold font-mono">🔖 Citing this Work</h2>
+
+<div class="relative w-12/12 mx-auto mt-4">
+    <div class="bg-gray-50 p-4 rounded-md">
         <div class="flex justify-between items-center ">
             <span class="text-gray-400 text-sm">BibTeX:</span>
             <button class="code bg-gray-300 hover:bg-gray-100 text-gray-500 px-3 py-1 rounded-md text-sm" data-clipboard-target="#code">Copy</button>
@@ -50,6 +125,7 @@
 <script>
     new ClipboardJS('.code');
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
 </div>
 </div>
