@@ -66,7 +66,7 @@
   </div>
 </div>
 
-<!--
+
 <h2 class="text-align text-lg mt-2 mb-2 font-bold font-mono">🤗 Model List</h2>
 
 <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
@@ -84,23 +84,903 @@
 </div>
 <div id="default-styled-tab-content">
   <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="td3-model" aria-labelledby="td3-model-tab">
-    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of TD3, SnapshotRL+TD3, and S3RL+TD3 on six MuJoCo environments. For details see <a>wandb</a>.</p>
-    <img class="mx-auto m-3 border-2" src="td3.svg" alt="TD3 Model List" style="max-width:90%;">
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto text-sm text-left text-gray-500">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+          <tr>
+            <th scope="col" class="px-6 py-3">Environment</th>
+            <th scope="col" class="px-6 py-3">Model Name</th>
+            <th scope="col" class="px-6 py-3">Evaluation Score(average of 100 episodes)</th>
+            <th scope="col" class="px-6 py-3">Commit</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Hopper-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Hopper-v4-td3_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-td3_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3577.72 ± 18.84</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-td3_continuous_action-seed3/commit/77fccc4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">77fccc4</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/Hopper-v4-td3_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">cleanrl/Hopper-v4-td3_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3244.59 ± 8.55</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/Hopper-v4-td3_continuous_action-seed1/commit/1e14f8f" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">1e14f8f</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-td3_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-td3_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3162.70 ± 400.28</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-td3_continuous_action-seed2/commit/e3219bd" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">e3219bd</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-td3_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-td3_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3161.47 ± 427.71</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-td3_continuous_action-seed5/commit/754ff16" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">754ff16</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-td3_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-td3_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3094.02 ± 807.61</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-td3_continuous_action-seed4/commit/398b843" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">398b843</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Walker2d-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/cleanrl/Walker2d-v4-td3_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">cleanrl/Walker2d-v4-td3_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3964.51 ± 9.70</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/Walker2d-v4-td3_continuous_action-seed1/commit/51752b6" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">51752b6</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-td3_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-td3_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3678.97 ± 340.29</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-td3_continuous_action-seed5/commit/089a235" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">089a235</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-td3_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-td3_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3314.10 ± 12.34</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-td3_continuous_action-seed3/commit/614767a" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">614767a</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-td3_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-td3_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3624.09 ± 539.63</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-td3_continuous_action-seed4/commit/dbf05cb" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">dbf05cb</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-td3_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-td3_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3527.67 ± 746.96</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-td3_continuous_action-seed2/commit/fdf3439" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">fdf3439</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">HalfCheetah-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/cleanrl/HalfCheetah-v4-td3_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">cleanrl/HalfCheetah-v4-td3_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">10762.42 ± 84.09</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/HalfCheetah-v4-td3_continuous_action-seed1/commit/8547754" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">8547754</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-td3_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-td3_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">10653.27 ± 75.24</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-td3_continuous_action-seed4/commit/0f60f2f" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">0f60f2f</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-td3_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-td3_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">11443.36 ± 933.39</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-td3_continuous_action-seed3/commit/0c33876" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">0c33876</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-td3_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-td3_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">10185.49 ± 107.47</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-td3_continuous_action-seed2/commit/ec9624a" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">ec9624a</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-td3_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-td3_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">10204.25 ± 139.05</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-td3_continuous_action-seed5/commit/39939c8" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">39939c8</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Ant-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Ant-v4-td3_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-td3_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5473.45 ± 118.94</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-td3_continuous_action-seed4/commit/9a956a6" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">9a956a6</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-td3_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-td3_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5211.38 ± 428.70</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-td3_continuous_action-seed3/commit/14610c5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">14610c5</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/Ant-v4-td3_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">cleanrl/Ant-v4-td3_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5240.79 ± 730.24</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/Ant-v4-td3_continuous_action-seed1/commit/3bd17bc" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">3bd17bc</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-td3_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-td3_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2802.61 ± 163.65</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-td3_continuous_action-seed5/commit/074ff1a" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">074ff1a</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-td3_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-td3_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2606.88 ± 36.88</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-td3_continuous_action-seed2/commit/ad845c9" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">ad845c9</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Swimmer-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Swimmer-v4-td3_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-td3_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">113.19 ± 18.53</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-td3_continuous_action-seed4/commit/1161fa1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">1161fa1</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-td3_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-td3_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">88.97 ± 19.63</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-td3_continuous_action-seed2/commit/d6ad4b1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">d6ad4b1</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-td3_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-td3_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">82.71 ± 14.26</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-td3_continuous_action-seed5/commit/69dfa47" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">69dfa47</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/Swimmer-v4-td3_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">cleanrl/Swimmer-v4-td3_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">60.09 ± 9.06</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/Swimmer-v4-td3_continuous_action-seed1/commit/6eab7d2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">6eab7d2</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-td3_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-td3_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">62.38 ± 12.78</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-td3_continuous_action-seed3/commit/380bcd0" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">380bcd0</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Humanoid-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Humanoid-v4-td3_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-td3_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5279.53 ± 35.43</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-td3_continuous_action-seed3/commit/e9dd75c" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">e9dd75c</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-td3_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-td3_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5189.38 ± 27.99</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-td3_continuous_action-seed5/commit/c015a50" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">c015a50</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-td3_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-td3_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5038.18 ± 130.45</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-td3_continuous_action-seed2/commit/5f196ad" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">5f196ad</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/Humanoid-v4-td3_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">cleanrl/Humanoid-v4-td3_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5303.39 ± 514.14</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/cleanrl/Humanoid-v4-td3_continuous_action-seed1/commit/0450bee" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">0450bee</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-td3_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-td3_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">4880.24 ± 1187.43</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-td3_continuous_action-seed4/commit/873f6ab" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">873f6ab</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>    
   </div>
   <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="sac-model" aria-labelledby="sac-model-tab">
-    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of SAC, SnapshotRL+SAC, and S3RL+SAC on six MuJoCo environments. For details see <a>wandb</a>.</p>
-    <img class="mx-auto m-3 border-2" src="sac.svg" alt="SAC Model List" style="max-width:90%;">
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto text-sm text-left text-gray-500">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+          <tr>
+            <th scope="col" class="px-6 py-3">Environment</th>
+            <th scope="col" class="px-6 py-3">Model Name</th>
+            <th scope="col" class="px-6 py-3">Evaluation Score(average of 100 episodes)</th>
+            <th scope="col" class="px-6 py-3">Commit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Hopper-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-sac_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2862.20 ± 972.12</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed4/commit/1ee692e" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">1ee692e</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-sac_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2493.92 ± 609.06</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed3/commit/4015a94" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">4015a94</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-sac_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2274.04 ± 605.18</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed1/commit/63ba003" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">63ba003</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-sac_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">1598.77 ± 492.69</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed5/commit/bf93082" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">bf93082</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-sac_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">1555.12 ± 279.93</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-sac_continuous_action-seed2/commit/d6b664e" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">d6b664e</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Walker2d-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-sac_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5350.98 ± 89.84</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed4/commit/c8561ff" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">c8561ff</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-sac_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5237.31 ± 942.48</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed3/commit/2bb35b1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">2bb35b1</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-sac_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5192.85 ± 85.73</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed1/commit/29d35a9" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">29d35a9</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-sac_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">4731.36 ± 28.52</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed5/commit/7a7f631" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">7a7f631</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-sac_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3678.91 ± 523.03</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-sac_continuous_action-seed2/commit/49501ed" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">49501ed</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">HalfCheetah-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-sac_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">11623.83 ± 156.02</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed4/commit/bf0622e" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">bf0622e</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-sac_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">11615.36 ± 1484.63</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed2/commit/f5122c3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">f5122c3</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-sac_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">11543.00 ± 122.49</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed3/commit/a8c2810" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">a8c2810</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-sac_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">11211.47 ± 972.19</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed1/commit/19da4f5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">19da4f5</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-sac_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">8187.18 ± 676.54</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-sac_continuous_action-seed5/commit/6816d88" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">6816d88</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Ant-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-sac_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5735.30 ± 989.07</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed3/commit/b1126bf" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">b1126bf</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-sac_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5517.12 ± 1143.23</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed4/commit/83b4537" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">83b4537</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-sac_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5511.89 ± 1041.57</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed2/commit/514f6d2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">514f6d2</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-sac_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5314.44 ± 1159.54</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed1/commit/b32f853" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">b32f853</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-sac_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3544.68 ± 2044.81</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-sac_continuous_action-seed5/commit/be8c365" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">be8c365</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Swimmer-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-sac_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">148.97 ± 5.85</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed3/commit/6c0875a" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">6c0875a</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-sac_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">76.70 ± 25.53</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed2/commit/cf113b4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">cf113b4</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-sac_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">74.85 ± 27.64</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed1/commit/d9fd594" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">d9fd594</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-sac_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">50.26 ± 2.03</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed4/commit/40ca421" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">40ca421</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-sac_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">46.46 ± 1.08</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-sac_continuous_action-seed5/commit/94560c4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">94560c4</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Humanoid-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-sac_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5604.16 ± 404.34</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed4/commit/316b06c" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">316b06c</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-sac_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5570.79 ± 750.60</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed5/commit/6e3b960" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">6e3b960</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-sac_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5328.96 ± 1015.76</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed3/commit/204ee92" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">204ee92</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-sac_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5306.36 ± 466.78</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed2/commit/72f53bc" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">72f53bc</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-sac_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">5220.03 ± 212.43</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-sac_continuous_action-seed1/commit/6f2042f" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">6f2042f</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="ppo-model" aria-labelledby="ppo-model-tab">
-    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of PPO, SnapshotRL+PPO, and S3RL+PPO on six MuJoCo environments. For details see <a>wandb</a>.</p>
-    <img class="mx-auto m-3 border-2" src="ppo.svg" alt="PPO Model List" style="max-width:90%;">
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto text-sm text-left text-gray-500">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+          <tr>
+            <th scope="col" class="px-6 py-3">Environment</th>
+            <th scope="col" class="px-6 py-3">Model Name</th>
+            <th scope="col" class="px-6 py-3">Evaluation Score(average of 100 episodes)</th>
+            <th scope="col" class="px-6 py-3">Commit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Hopper-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2515.99 ± 807.22</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed3/commit/3d317e2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">3d317e2</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2444.71 ± 794.51</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed5/commit/3f3fd61" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">3f3fd61</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">1990.14 ± 683.73</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed2/commit/54a25d8" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">54a25d8</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">1917.18 ± 681.46</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed4/commit/2322d58" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">2322d58</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">1649.65 ± 559.09</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Hopper-v4-ppo_fix_continuous_action-seed1/commit/d27a3d5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">d27a3d5</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Walker2d-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">4735.58 ± 1183.56</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed4/commit/9df90bd" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">9df90bd</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">4057.75 ± 1062.76</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed2/commit/b25b341" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">b25b341</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3781.41 ± 1202.34</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed3/commit/907651a" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">907651a</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3357.25 ± 1235.64</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed1/commit/28a01f1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">28a01f1</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2401.69 ± 876.52</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Walker2d-v4-ppo_fix_continuous_action-seed5/commit/67e3c10" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">67e3c10</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">HalfCheetah-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">4043.23 ± 526.25</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed1/commit/bc83fb6" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">bc83fb6</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2522.56 ± 537.35</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed4/commit/515348e" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">515348e</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">1866.44 ± 23.70</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed2/commit/871ea55" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">871ea55</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">1821.81 ± 27.10</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed5/commit/b007d7f" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">b007d7f</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">1741.62 ± 30.79</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/HalfCheetah-v4-ppo_fix_continuous_action-seed3/commit/f696a66" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">f696a66</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Ant-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-ppo_fix_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">3611.87 ± 747.12</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed2/commit/b88f77d" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">b88f77d</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-ppo_fix_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2739.20 ± 562.54</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed3/commit/419360f" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">419360f</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-ppo_fix_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2942.98 ± 823.33</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed4/commit/07048f2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">07048f2</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-ppo_fix_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">2383.17 ± 1044.23</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed5/commit/3eec78a" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">3eec78a</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Ant-v4-ppo_fix_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">1866.34 ± 766.40</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Ant-v4-ppo_fix_continuous_action-seed1/commit/be0d911" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">be0d911</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Swimmer-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">131.51 ± 2.04</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed1/commit/989c6ba" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">989c6ba</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">119.79 ± 2.48</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed4/commit/5057fec" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">5057fec</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">75.22 ± 4.29</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed3/commit/cc81c0e" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">cc81c0e</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">63.36 ± 1.08</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed2/commit/63be675" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">63be675</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">60.77 ± 3.35</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Swimmer-v4-ppo_fix_continuous_action-seed5/commit/4435bb6" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">4435bb6</a>
+            </td>
+          </tr>
+
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4" rowspan="5">Humanoid-v4</td>
+            <td class="px-6 py-4">
+              📌<a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed4" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed4</a>
+            </td>
+            <td class="px-6 py-4 font-mono">704.90 ± 153.81</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed4/commit/83d57b0" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">83d57b0</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed3" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed3</a>
+            </td>
+            <td class="px-6 py-4 font-mono">687.42 ± 159.92</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed3/commit/318aafa" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">318aafa</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed2" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed2</a>
+            </td>
+            <td class="px-6 py-4 font-mono">645.69 ± 143.65</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed2/commit/b5dcc47" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">b5dcc47</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed5" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed5</a>
+            </td>
+            <td class="px-6 py-4 font-mono">591.69 ± 107.84</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed5/commit/d08d91f" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">d08d91f</a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed1" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed1</a>
+            </td>
+            <td class="px-6 py-4 font-mono">640.32 ± 171.90</td>
+            <td class="px-6 py-4">
+              <a href="https://huggingface.co/sdpkjc/Humanoid-v4-ppo_fix_continuous_action-seed1/commit/e1edbff" target="_blank" class="text-blue-600 font-mono hover:underline text-xs">e1edbff</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
--->
+<br>
 
 
-    
+
 <h2 class="text-align text-lg mt-2 mb-2 font-bold font-mono">🔖 Citing this Work</h2>
 
 <div class="relative w-12/12 mx-auto mt-4">
