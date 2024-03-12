@@ -28,57 +28,57 @@
 
 <h2 class="text-align text-lg mt-4 mb-2 font-bold font-mono">📊 Experiment Results</h2>
 
-<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-  <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" data-tabs-toggle="#default-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+<div class="mb-4 border-b border-gray-200">
+  <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" data-tabs-toggle="#default-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 border-purple-600" data-tabs-inactive-classes="text-gray-500 hover:text-gray-600 border-gray-100 hover:border-gray-300" role="tablist">
       <li class="me-2">
           <button class="inline-block p-4 border-b-2 rounded-t-lg" id="td3-curve-tab" data-tabs-target="#td3-curve" type="button" role="tab" aria-selected="false">TD3</button>
       </li>
       <li class="me-2">
-        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="sac-curve-tab" data-tabs-target="#sac-curve" type="button" role="tab" aria-controls="sac" aria-selected="false">SAC</button>
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="sac-curve-tab" data-tabs-target="#sac-curve" type="button" role="tab" aria-controls="sac" aria-selected="false">SAC</button>
       </li>
       <li class="me-2">
-        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="ppo-curve-tab" data-tabs-target="#ppo-curve" type="button" role="tab" aria-controls="ppo" aria-selected="false">PPO</button>
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="ppo-curve-tab" data-tabs-target="#ppo-curve" type="button" role="tab" aria-controls="ppo" aria-selected="false">PPO</button>
       </li>
       <li class="me-2">
-        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="td3-ablation-curve-tab" data-tabs-target="#td3-ablation-curve" type="button" role="tab" aria-controls="td3-ablation" aria-selected="false">TD3 Ablation</button>
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="td3-ablation-curve-tab" data-tabs-target="#td3-ablation-curve" type="button" role="tab" aria-controls="td3-ablation" aria-selected="false">TD3 Ablation</button>
       </li>
       <li>
-        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" onclick="window.open('https://wandb.ai/iiiiiiiooo/snapshotrl/reportlist', '_blank');">🔗 See More</button>
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="window.open('https://wandb.ai/iiiiiiiooo/snapshotrl/reportlist', '_blank');">🔗 See More</button>
       </li>
   </ul>
 </div>
 <div id="default-styled-tab-content">
   <div class="hidden p-4 rounded-lg bg-gray-50" id="td3-curve" aria-labelledby="td3-tab">
-    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of TD3, SnapshotRL+TD3, and S3RL+TD3 on six MuJoCo environments. For details see <a>wandb</a>.</p>
-    <img class="mx-auto m-3 border-2" src="td3.svg" alt="SnapshotRL+TD3 Curve" style="max-width:90%;">
+    <p class="text-sm text-gray-500">Learning curves sample efficiency comparison of TD3, SnapshotRL+TD3, and S3RL+TD3 on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2 bg-white" src="td3.svg" alt="SnapshotRL+TD3 Curve" style="max-width:90%;">
   </div>
   <div class="hidden p-4 rounded-lg bg-gray-50" id="sac-curve" aria-labelledby="sac-tab">
-    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of SAC, SnapshotRL+SAC, and S3RL+SAC on six MuJoCo environments. For details see <a>wandb</a>.</p>
-    <img class="mx-auto m-3 border-2" src="sac.svg" alt="SnapshotRL+SAC Curve" style="max-width:90%;">
+    <p class="text-sm text-gray-500">Learning curves sample efficiency comparison of SAC, SnapshotRL+SAC, and S3RL+SAC on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2 bg-white" src="sac.svg" alt="SnapshotRL+SAC Curve" style="max-width:90%;">
   </div>
   <div class="hidden p-4 rounded-lg bg-gray-50" id="ppo-curve" aria-labelledby="ppo-tab">
-    <p class="text-sm text-gray-500 dark:text-gray-400">Learning curves sample efficiency comparison of PPO, SnapshotRL+PPO, and S3RL+PPO on six MuJoCo environments. For details see <a>wandb</a>.</p>
-    <img class="mx-auto m-3 border-2" src="ppo.svg" alt="SnapshotRL+PPO Curve" style="max-width:90%;">
+    <p class="text-sm text-gray-500">Learning curves sample efficiency comparison of PPO, SnapshotRL+PPO, and S3RL+PPO on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2 bg-white" src="ppo.svg" alt="SnapshotRL+PPO Curve" style="max-width:90%;">
   </div>
   <div class="hidden p-4 rounded-lg bg-gray-50" id="td3-ablation-curve" aria-labelledby="td3-ablation-tab">
-    <p class="text-sm text-gray-500 dark:text-gray-400">Ablation study results showing the impact of key components on the sample efficiency of S3RL+TD3 on six MuJoCo environments. For details see <a>wandb</a>.</p>
-    <img class="mx-auto m-3 border-2" src="td3_ablation.svg" alt="S3RL+TD3 Ablation Curve" style="max-width:90%;">
+    <p class="text-sm text-gray-500">Ablation study results showing the impact of key components on the sample efficiency of S3RL+TD3 on six MuJoCo environments. For details see <a>wandb</a>.</p>
+    <img class="mx-auto m-3 border-2 bg-white" src="td3_ablation.svg" alt="S3RL+TD3 Ablation Curve" style="max-width:90%;">
   </div>
 </div>
 
 
 <h2 class="text-align text-lg mt-4 mb-2 font-bold font-mono">🤗 Model List</h2>
 
-<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-  <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" data-tabs-toggle="#default-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" role="tablist">
+<div class="mb-4 border-b border-gray-200">
+  <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" data-tabs-toggle="#default-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 border-purple-600" data-tabs-inactive-classes="text-gray-500 hover:text-gray-600 border-gray-100 hover:border-gray-300" role="tablist">
       <li class="me-2">
           <button class="inline-block p-4 border-b-2 rounded-t-lg" id="td3-model-tab" data-tabs-target="#td3-model" type="button" role="tab" aria-selected="false">TD3 Teacher Models</button>
       </li>
       <li class="me-2">
-        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="sac-model-tab" data-tabs-target="#sac-model" type="button" role="tab" aria-controls="sac" aria-selected="false">SAC Teacher Models</button>
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="sac-model-tab" data-tabs-target="#sac-model" type="button" role="tab" aria-controls="sac" aria-selected="false">SAC Teacher Models</button>
       </li>
       <li>
-        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="ppo-model-tab" data-tabs-target="#ppo-model" type="button" role="tab" aria-controls="ppo" aria-selected="false">PPO Teacher Models</button>
+        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300" id="ppo-model-tab" data-tabs-target="#ppo-model" type="button" role="tab" aria-controls="ppo" aria-selected="false">PPO Teacher Models</button>
       </li>
   </ul>
 </div>
